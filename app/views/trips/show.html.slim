@@ -1,0 +1,11 @@
+h1 Trip
+h4
+  | From 
+  = @trip.source
+  |  to 
+  = @trip.destination
+  |  in 
+  = @trip.duration / 60
+  |  minutes.
+h2 Rides
+= render(@rides) || 'There are no rides'

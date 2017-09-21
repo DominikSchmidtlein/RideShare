@@ -1,0 +1,10 @@
+= link_to trip, class: 'list-group-item' do
+  h4.list-group-item-heading
+    | From 
+    = trip.source
+    |  to 
+    = trip.destination    
+  p.list-group-item-text
+    | Expected trip time is 
+    = trip.duration / 60
+    |  minutes.

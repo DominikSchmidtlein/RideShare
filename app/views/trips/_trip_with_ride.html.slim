@@ -1,0 +1,14 @@
+= link_to share_trip_path(trip, ride), class: 'list-group-item' do
+  h4.list-group-item-heading
+    | $
+    = trip.cost 
+    |  for a 
+    = trip.ride_duration / 60
+    |  minute ride
+  p.list-group-item-text
+    | The driver will incur a 
+    = trip.detour_duration / 60
+    |  minute detour on his trip from 
+    = trip.source
+    |  to 
+    = trip.destination

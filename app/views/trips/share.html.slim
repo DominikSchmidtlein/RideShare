@@ -1,0 +1,18 @@
+h1 Trip
+h4
+  | $
+  = @trip.cost 
+  |  for a 
+  = @trip.ride_duration / 60
+  |  minute ride from 
+  = @ride.source
+  |  to 
+  = @ride.destination
+p
+  | The driver will incur a 
+  = @trip.detour_duration / 60
+  |  minute detour on his trip from 
+  = @trip.source
+  |  to 
+  = @trip.destination
+= link_to 'Request', shares_path(trip_id: @trip, ride_id: @ride), method: :post, class: 'btn btn-default'

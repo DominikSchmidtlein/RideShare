@@ -1,0 +1,15 @@
+h1 Create Your Trip
+= form_for @trip do |f|
+  .row
+    .col-sm-6
+      = f.label :source
+      = f.text_field :source, class: 'form-control'
+      = f.label :destination
+      = f.text_field :destination, class: 'form-control'
+    .col-sm-6
+      = f.label :earliest_departure
+      = f.datetime_field :earliest_departure, class: 'form-control'
+      = f.label :latest_arrival
+      = f.datetime_field :latest_arrival, class: 'form-control'
+  = f.submit class: 'btn btn-success pull-right'
+      

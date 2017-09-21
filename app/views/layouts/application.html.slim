@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title My App
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  body
+    .container
+      - if flash[:error]
+        .alert.alert-danger.alert-dismissable
+          a.close data-dismiss="alert" aria-label="close" &times;
+          = flash[:error]
+      = yield

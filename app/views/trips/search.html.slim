@@ -1,0 +1,10 @@
+h1 Available trips
+p
+  | For your ride from 
+  = @ride.source
+  |  to 
+  = @ride.destination
+  | , the following trips are available.
+.list-group
+  = render partial: 'trip_with_ride', collection: @trips, as: :trip, 
+    locals: { ride: @ride }

@@ -1,0 +1,7 @@
+h1 Trips
+/ = form_tag trips_path, method: :get, class: 'form-inline' do
+/   = text_field_tag :source, params[:source], class: 'form-control'
+/   = text_field_tag :destination, params[:destination], class: 'form-control'
+/   = submit_tag 'Search', class: 'btn btn-default'
+.list-group
+  = render(@trips) || 'There are no trips'
